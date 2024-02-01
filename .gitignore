@@ -1,0 +1,9 @@
+__history
+__recovery
+lib
+!lib/.keep
+bin
+!bin/.keep
+*.bak
+*.identcache
+*.local
