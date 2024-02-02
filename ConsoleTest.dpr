@@ -22,6 +22,8 @@ uses
   MaterialColor.DynamicColor.Variant in 'src\MaterialColor.DynamicColor.Variant.pas',
   MaterialColor.Palettes.Core in 'src\MaterialColor.Palettes.Core.pas',
   MaterialColor.Palettes.Tones in 'src\MaterialColor.Palettes.Tones.pas',
+  MaterialColor.Quantize.WsMeans in 'src\MaterialColor.Quantize.WsMeans.pas',
+  MaterialColor.Quantize.Wu in 'src\MaterialColor.Quantize.Wu.pas',
   MaterialColor.Scheme.Content in 'src\MaterialColor.Scheme.Content.pas',
   MaterialColor.Scheme.Expressive in 'src\MaterialColor.Scheme.Expressive.pas',
   MaterialColor.Scheme.Fidelity in 'src\MaterialColor.Scheme.Fidelity.pas',
@@ -45,6 +47,8 @@ uses
   MaterialColor.DynamicColorTest in 'test\MaterialColor.DynamicColorTest.pas',
   MaterialColor.Palettes.CoreTest in 'test\MaterialColor.Palettes.CoreTest.pas',
   MaterialColor.Palettes.TonesTest in 'test\MaterialColor.Palettes.TonesTest.pas',
+  MaterialColor.Quantize.WsMeansTest in 'test\MaterialColor.Quantize.WsMeansTest.pas',
+  MaterialColor.Quantize.WuTest in 'test\MaterialColor.Quantize.WuTest.pas',
   MaterialColor.Scheme.MonochromeTest in 'test\MaterialColor.Scheme.MonochromeTest.pas',
   MaterialColor.SchemeTest in 'test\MaterialColor.SchemeTest.pas',
   MaterialColor.ScoreTest in 'test\MaterialColor.ScoreTest.pas',
@@ -52,5 +56,6 @@ uses
   MaterialColor.UtilsTest in 'test\MaterialColor.UtilsTest.pas';
 
 begin
+  ReportMemoryLeaksOnShutdown := True;
   RunRegisteredTests;
 end.

@@ -109,6 +109,8 @@
         <DCCReference Include="src\MaterialColor.DynamicColor.Variant.pas"/>
         <DCCReference Include="src\MaterialColor.Palettes.Core.pas"/>
         <DCCReference Include="src\MaterialColor.Palettes.Tones.pas"/>
+        <DCCReference Include="src\MaterialColor.Quantize.WsMeans.pas"/>
+        <DCCReference Include="src\MaterialColor.Quantize.Wu.pas"/>
         <DCCReference Include="src\MaterialColor.Scheme.Content.pas"/>
         <DCCReference Include="src\MaterialColor.Scheme.Expressive.pas"/>
         <DCCReference Include="src\MaterialColor.Scheme.Fidelity.pas"/>
@@ -132,6 +134,8 @@
         <DCCReference Include="test\MaterialColor.DynamicColorTest.pas"/>
         <DCCReference Include="test\MaterialColor.Palettes.CoreTest.pas"/>
         <DCCReference Include="test\MaterialColor.Palettes.TonesTest.pas"/>
+        <DCCReference Include="test\MaterialColor.Quantize.WsMeansTest.pas"/>
+        <DCCReference Include="test\MaterialColor.Quantize.WuTest.pas"/>
         <DCCReference Include="test\MaterialColor.Scheme.MonochromeTest.pas"/>
         <DCCReference Include="test\MaterialColor.SchemeTest.pas"/>
         <DCCReference Include="test\MaterialColor.ScoreTest.pas"/>
@@ -178,7 +182,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Win32\Debug\ConsoleTest.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="bin\Win32\Debug\ConsoleTest.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>ConsoleTest.exe</RemoteName>
                         <Overwrite>true</Overwrite>

@@ -12,6 +12,8 @@ type
 
     function DeltaE(const lab: TLab): Double;
     function ToString(): string;
+
+    constructor Create(l, a, b: Double);
   end;
 
 function IntFromLab(const lab: TLab): TARGB;
@@ -112,6 +114,13 @@ begin
 end;
 
 { TLab }
+
+constructor TLab.Create(l, a, b: Double);
+begin
+  Self.l := l;
+  Self.a := a;
+  Self.b := b;
+end;
 
 function TLab.DeltaE(const lab: TLab): Double;
 var
