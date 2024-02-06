@@ -8,6 +8,12 @@ All tests have been ported and require [DUnitX](https://github.com/VSoftTechnolo
 
 The plan is to build a Custom Style class so delphi apps could automagically themed... (help needed)
 
+### VCL Applications
+
+Use `PictureToColor()` from `Material.VCL` to get a key color to initialize an instance of `TDynamicScheme` using one of the `TDynamicSchemeBuilder`.
+
+See `ProcessImage()` and `UpdateTheme()` methods in [GUITest.Mainform.pas](./GUITest.Mainform.pas)
+
 # Material Color Utilities
 
 Algorithms and utilities that power the Material Design 3 (M3) color system, including choosing theme colors from images and creating tones of colors; all in a new color space.
@@ -34,7 +40,7 @@ every component — ex. MDC doesn’t need quantization/scoring/image extraction
 | **dynamiccolor** | Obtain colors that adjust based on UI state (dark theme, style, preferences, contrast requirements, etc.) |
 | **hct**          | A new color space (hue, chrome, tone) based on CAM16 x L*, that accounts for viewing conditions |
 | **palettes**     | Tonal palette — range of colors that varies only in tone <br>Core palette — set of tonal palettes needed to create Material color schemes |
-| **quantize**     | Turn an image into N colors; composed of Celebi, which runs Wu, then WSMeans<br/><strong>NOT IMPLEMENTED</strong> |
+| **quantize**     | Turn an image into N colors; composed of Celebi, which runs Wu, then WSMeans |
 | **scheme**       | Create static and dynamic color schemes from a single color or a core palette |
 | **score**        | Rank colors for suitability for theming                   |
 | **temperature**  | Obtain analogous and complementary colors                 |
