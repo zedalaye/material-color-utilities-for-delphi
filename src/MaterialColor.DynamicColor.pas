@@ -3,7 +3,7 @@ unit MaterialColor.DynamicColor;
 interface
 
 uses
-  System.SysUtils, System.Math,
+  System.SysUtils, System.Math, System.UITypes,
   MaterialColor.Utils,
   MaterialColor.CAM.HCT,
   MaterialColor.DynamicColor.ContrastCurve,
@@ -77,6 +77,10 @@ type
     function GetArgb(const scheme: TDynamicScheme): TARGB;
     function GetHct(const scheme: TDynamicScheme): THCT;
     function GetTone(const scheme: TDynamicScheme): Double;
+
+    (* Delphi VCL Specific *)
+
+    function GetColor(const scheme: TDynamicScheme): TColor;
 
     (* accessors to internal properties *)
 
@@ -158,6 +162,10 @@ type
     function GetHct(const scheme: TDynamicScheme): THCT;
 
     function GetTone(const scheme: TDynamicScheme): Double;
+
+    (* Delphi VCL Specific *)
+
+    function GetColor(const scheme: TDynamicScheme): TColor;
   end;
 
 (**
@@ -562,6 +570,11 @@ begin
 
     Result := answer;
   end;
+end;
+
+function TDynamicColor.GetColor(const scheme: TDynamicScheme): TColor;
+begin
+  Result := TAlphaColorRec.ColorToRGB(GetArgb(scheme));
 end;
 
 end.
