@@ -6,6 +6,7 @@ uses
   System.SysUtils, System.UITypes, System.Math;
 
 type
+  PARGB = ^TARGB;
   TARGB = TAlphaColor;
 
 type
