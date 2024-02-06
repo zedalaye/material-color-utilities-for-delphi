@@ -6,6 +6,9 @@
         <Projects Include="ConsoleTest.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="GUITest.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -23,14 +26,23 @@
     <Target Name="ConsoleTest:Make">
         <MSBuild Projects="ConsoleTest.dproj" Targets="Make"/>
     </Target>
+    <Target Name="GUITest">
+        <MSBuild Projects="GUITest.dproj"/>
+    </Target>
+    <Target Name="GUITest:Clean">
+        <MSBuild Projects="GUITest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GUITest:Make">
+        <MSBuild Projects="GUITest.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="ConsoleTest"/>
+        <CallTarget Targets="ConsoleTest;GUITest"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="ConsoleTest:Clean"/>
+        <CallTarget Targets="ConsoleTest:Clean;GUITest:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="ConsoleTest:Make"/>
+        <CallTarget Targets="ConsoleTest:Make;GUITest:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
