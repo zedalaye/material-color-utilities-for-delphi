@@ -7,6 +7,10 @@ uses
   MaterialColor.Palettes.Core;
 
 type
+  // @deprecated
+  // Please see https://github.com/material-foundation/material-color-utilities/blob/main/make_schemes.md
+  // for migration guidance.
+
   TScheme = record
     primary: TARGB;
     on_primary: TARGB;
@@ -37,41 +41,41 @@ type
     inverse_surface: TARGB;
     inverse_on_surface: TARGB;
     inverse_primary: TARGB;
-  end;
+  end deprecated 'The `TScheme` class is deprecated in favor of `TDynamicScheme`';
 
 (**
  * Returns the light material color scheme based on the given core palette.
  *)
-function MaterialLightColorSchemeFromPalette(palette: TCorePalette): TScheme;
+function MaterialLightColorSchemeFromPalette(palette: TCorePalette): TScheme; deprecated 'use TSchemeTonalSpot.Create(THCT.Create(color), False, 0.0)';
 
 (**
  * Returns the dark material color scheme based on the given core palette.
  *)
-function MaterialDarkColorSchemeFromPalette(palette: TCorePalette): TScheme;
+function MaterialDarkColorSchemeFromPalette(palette: TCorePalette): TScheme; deprecated 'use TSchemeTonalSpot.Create(THCT.Create(color), True, 0.0)';
 
 (**
  * Returns the light material color scheme based on the given color,
  * in ARGB format.
  *)
-function MaterialLightColorScheme(color: TARGB): TScheme;
+function MaterialLightColorScheme(color: TARGB): TScheme; deprecated 'use TSchemeTonalSpot.Create(THCT.Create(color), False, 0.0)';
 
 (**
  * Returns the dark material color scheme based on the given color,
  * in ARGB format.
  *)
-function MaterialDarkColorScheme(color: TARGB): TScheme;
+function MaterialDarkColorScheme(color: TARGB): TScheme; deprecated 'use TSchemeTonalSpot.Create(THCT.Create(color), True, 0.0)';
 
 (**
  * Returns the light material content color scheme based on the given color,
  * in ARGB format.
  *)
-function MaterialLightContentColorScheme(color: TARGB): TScheme;
+function MaterialLightContentColorScheme(color: TARGB): TScheme; deprecated 'use TSchemeContent.Create(THCT.Create(color), False, 0.0)';
 
 (**
  * Returns the dark material content color scheme based on the given color,
  * in ARGB format.
  *)
-function MaterialDarkContentColorScheme(color: TARGB): TScheme;
+function MaterialDarkContentColorScheme(color: TARGB): TScheme; deprecated 'use TSchemeContent.Create(THCT.Create(color), True, 0.0)';
 
 implementation
 
