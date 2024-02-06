@@ -88,6 +88,12 @@ type
     function GetOnTertiaryFixedVariant: TARGB;
   end;
 
+  TDynamicSchemeBuilder = class abstract
+    class function Construct(set_source_color_hct: THCT; set_is_dark: Boolean; set_contrast_level: Double = 0.0): TDynamicScheme; virtual; abstract;
+  end;
+
+  TDynamicSchemeBuilderClass = class of TDynamicSchemeBuilder;
+
 implementation
 
 uses

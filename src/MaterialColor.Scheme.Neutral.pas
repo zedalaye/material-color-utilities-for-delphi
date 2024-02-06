@@ -7,8 +7,8 @@ uses
   MaterialColor.DynamicColor.DynamicScheme;
 
 type
-  TSchemeMonochrome = record
-    class function Construct(set_source_color_hct: THCT; set_is_dark: Boolean; set_contrast_level: Double = 0.0): TDynamicScheme; static;
+  TSchemeNeutral = class(TDynamicSchemeBuilder)
+    class function Construct(set_source_color_hct: THCT; set_is_dark: Boolean; set_contrast_level: Double = 0.0): TDynamicScheme; override;
   end;
 
 implementation
@@ -18,9 +18,9 @@ uses
   MaterialColor.DynamicColor.Variant,
   MaterialColor.Palettes.Tones;
 
-{ TSchemeMonochrome }
+{ TSchemeNeutral }
 
-class function TSchemeMonochrome.Construct(set_source_color_hct: THCT;
+class function TSchemeNeutral.Construct(set_source_color_hct: THCT;
   set_is_dark: Boolean; set_contrast_level: Double): TDynamicScheme;
 begin
   Result := TDynamicScheme.Create(

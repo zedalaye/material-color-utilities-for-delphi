@@ -7,8 +7,8 @@ uses
   MaterialColor.DynamicColor.DynamicScheme;
 
 type
-  TSchemeVibrant = record
-    class function Construct(set_source_color_hct: THCT; set_is_dark: Boolean; set_contrast_level: Double = 0.0): TDynamicScheme; static;
+  TSchemeVibrant = class(TDynamicSchemeBuilder)
+    class function Construct(set_source_color_hct: THCT; set_is_dark: Boolean; set_contrast_level: Double = 0.0): TDynamicScheme; override;
   end;
 
 implementation
