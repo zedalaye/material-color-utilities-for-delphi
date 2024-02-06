@@ -43,13 +43,13 @@ implementation
 
 procedure TestQuantizeWu.TestFullImage;
 var
-  pixels, result: TArray<TARGB>;
+  pixels: TArray<TARGB>;
 begin
   SetLength(pixels, 12544);
-  for var i := 0 to Length(pixels) -1 do
-    pixels[i] := i mod 8000;
+  for var i: Cardinal := 0 to Length(pixels) -1 do
+    pixels[i] := TARGB($ff000000 + (i mod 8000));
 
-  result := QuantizeWu(pixels, 128);
+  var result := QuantizeWu(pixels, 128);
 
   // Original test has no assert
   Assert.AreEqual(Length(result), 128);

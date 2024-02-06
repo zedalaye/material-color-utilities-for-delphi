@@ -41,6 +41,8 @@ type
 
 implementation
 
+{$WARN SYMBOL_DEPRECATED OFF}
+
 { TestScheme }
 
 procedure TestScheme.TestSurfaceTones;

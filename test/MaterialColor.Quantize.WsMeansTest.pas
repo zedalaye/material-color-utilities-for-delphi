@@ -46,8 +46,8 @@ var
   pixels, starting_clusters: TArray<TARGB>;
 begin
   SetLength(pixels, 12544);
-  for var i := 0 to Length(pixels) -1 do
-    pixels[i] := i mod 8000;
+  for var i: Cardinal := 0 to Length(pixels) -1 do
+    pixels[i] := TARGB($ff000000 + (i mod 8000));
 
   TimeSpent := 0.0;
 

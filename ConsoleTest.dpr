@@ -22,6 +22,7 @@ uses
   MaterialColor.DynamicColor.Variant in 'src\MaterialColor.DynamicColor.Variant.pas',
   MaterialColor.Palettes.Core in 'src\MaterialColor.Palettes.Core.pas',
   MaterialColor.Palettes.Tones in 'src\MaterialColor.Palettes.Tones.pas',
+  MaterialColor.Quantize.Celebi in 'src\MaterialColor.Quantize.Celebi.pas',
   MaterialColor.Quantize.WsMeans in 'src\MaterialColor.Quantize.WsMeans.pas',
   MaterialColor.Quantize.Wu in 'src\MaterialColor.Quantize.Wu.pas',
   MaterialColor.Scheme.Content in 'src\MaterialColor.Scheme.Content.pas',
@@ -53,7 +54,8 @@ uses
   MaterialColor.SchemeTest in 'test\MaterialColor.SchemeTest.pas',
   MaterialColor.ScoreTest in 'test\MaterialColor.ScoreTest.pas',
   MaterialColor.TemperatureCacheTest in 'test\MaterialColor.TemperatureCacheTest.pas',
-  MaterialColor.UtilsTest in 'test\MaterialColor.UtilsTest.pas';
+  MaterialColor.UtilsTest in 'test\MaterialColor.UtilsTest.pas',
+  MaterialColor.Quantize.CelebiTest in 'test\MaterialColor.Quantize.CelebiTest.pas';
 
 begin
   ReportMemoryLeaksOnShutdown := True;
